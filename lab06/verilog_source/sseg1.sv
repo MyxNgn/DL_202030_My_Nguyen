@@ -27,7 +27,7 @@ module sseg1(
     output dp   
    );
    
-   reg [3:0] convert;
+   wire [3:0] convert;
    
    mux2_4b mux0(
     .in0(sw[3:0]),
@@ -43,6 +43,8 @@ module sseg1(
     
     assign an[0] = sw[15];
     assign an[1] = ~sw[15];
+    assign an[3:2] = 2'b11;
+    assign dp = 1'b1; 
     
    
 endmodule
