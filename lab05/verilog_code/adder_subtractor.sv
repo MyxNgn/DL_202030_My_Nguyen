@@ -24,7 +24,7 @@ module adder_subtractor(
     input [1:0] a, b,
     input mode,
     output [1:0] sum,
-    output cout
+    output cbout
     );
     
     wire c1, c2;
@@ -49,4 +49,7 @@ module adder_subtractor(
         .cout(c2),
         .s(sum[1])
     );
+    
+    //Convert carry to borrow when subtracting
+    assign cbout = c2 ^ mode;
 endmodule

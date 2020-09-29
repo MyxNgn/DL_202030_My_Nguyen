@@ -41,3 +41,4 @@ source full_adder_test.tcl
 close_sim
 launch_simulation
 source full_adder_test.tcl
+close_sim
