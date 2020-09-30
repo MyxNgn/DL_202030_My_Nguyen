@@ -23,8 +23,13 @@
 module adder_subtractor(
     input [1:0] a, b,
     input mode,
+<<<<<<< Updated upstream
     output cbout,
     output [1:0] sum
+=======
+    output [1:0] sum,
+    output cbout
+>>>>>>> Stashed changes
     );
     
     wire c1, c2;
@@ -51,7 +56,13 @@ module adder_subtractor(
         .cout(c2),
         .s(sum[1])
     );
+<<<<<<< Updated upstream
     
     //Convert carry to borrow when subtracting
     assign cbout =  c2 ^ mode;
+=======
+
+    //Convert carry to borrow when subtracting
+    assign cbout = c2 ^ mode;
+>>>>>>> Stashed changes
 endmodule
