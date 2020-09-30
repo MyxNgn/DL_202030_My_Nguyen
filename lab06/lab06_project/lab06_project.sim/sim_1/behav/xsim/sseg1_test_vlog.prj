@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../verilog_source/mux2_4b.sv" \
+"../../../../../verilog_source/sseg1.sv" \
+"../../../../../verilog_source/sseg_decoder.sv" \
+"../../../../../verilog_source/wrap.sv" \
+"../../../../../verilog_source/sseg1_test.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

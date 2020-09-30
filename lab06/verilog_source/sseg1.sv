@@ -21,7 +21,8 @@
 
 
 module sseg1(
-    input [15:0] sw,
+    input [3:0] sw3_0, sw7_4,
+    input sw15,
     output [3:0] an, 
     output [6:0] seg,
     output dp   
@@ -30,9 +31,9 @@ module sseg1(
    wire [3:0] convert;
    
    mux2_4b mux0(
-    .in0(sw[3:0]),
-    .in1(sw[7:4]),
-    .se1(sw[15]),
+    .in0(sw3_0),
+    .in1(sw7_4),
+    .se1(sw15),
     .out(convert)
     );
    
@@ -41,10 +42,9 @@ module sseg1(
     .sseg(seg)
     );
     
-    assign an[0] = sw[15];
-    assign an[1] = ~sw[15];
+    assign an[0] = sw15;
+    assign an[1] = ~sw15;
     assign an[3:2] = 2'b11;
-    assign dp = 1'b1; 
+    assign dp = 1'b1;
     
-   
 endmodule

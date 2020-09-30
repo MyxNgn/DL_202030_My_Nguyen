@@ -3,7 +3,10 @@
 May 27 2020
 20:09:33
 H:/DL_202030_My_Nguyen/lab06/lab06_project/lab06_project.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
-H:/DL_202030_My_Nguyen/lab06/verilog_source/mux2_4b.sv,1601397033,systemVerilog,,H:/DL_202030_My_Nguyen/lab06/verilog_source/mux2_4b_test.sv,,mux2_4b,,,,,,,,
+H:/DL_202030_My_Nguyen/lab06/verilog_source/mux2_4b.sv,1601397033,systemVerilog,,H:/DL_202030_My_Nguyen/lab06/verilog_source/sseg1.sv,,mux2_4b,,,,,,,,
 H:/DL_202030_My_Nguyen/lab06/verilog_source/mux2_4b_test.sv,1601399185,systemVerilog,,,,mux2_4b_test,,,,,,,,
-H:/DL_202030_My_Nguyen/lab06/verilog_source/sseg_decoder.sv,1601400252,systemVerilog,,H:/DL_202030_My_Nguyen/lab06/verilog_source/sseg_decoder_test.sv,,sseg_decoder,,,,,,,,
+H:/DL_202030_My_Nguyen/lab06/verilog_source/sseg1.sv,1601501002,systemVerilog,,H:/DL_202030_My_Nguyen/lab06/verilog_source/sseg_decoder.sv,,sseg1,,,,,,,,
+H:/DL_202030_My_Nguyen/lab06/verilog_source/sseg1_test.sv,1601502903,systemVerilog,,,,sseg1_test,,,,,,,,
+H:/DL_202030_My_Nguyen/lab06/verilog_source/sseg_decoder.sv,1601400252,systemVerilog,,H:/DL_202030_My_Nguyen/lab06/verilog_source/wrap.sv,,sseg_decoder,,,,,,,,
 H:/DL_202030_My_Nguyen/lab06/verilog_source/sseg_decoder_test.sv,1601401611,systemVerilog,,,,sseg_decoder_test,,,,,,,,
+H:/DL_202030_My_Nguyen/lab06/verilog_source/wrap.sv,1601501900,systemVerilog,,H:/DL_202030_My_Nguyen/lab06/verilog_source/sseg1_test.sv,,wrap,,,,,,,,
