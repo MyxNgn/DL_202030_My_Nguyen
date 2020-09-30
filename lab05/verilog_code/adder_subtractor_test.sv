@@ -21,22 +21,35 @@
 
 
 module adder_subtractor_test();
-    wire [1:0] a, b;
-    wire mode;
-    reg [1:0] sum;
-    reg cbout;
+    reg [1:0] a, b;
+    reg mode;
+    wire [1:0] sum;
+    wire cbout;
     
-    adder_subtractor(
-    .a(a),
-    .b(b),
-    .mode(mode),
-    .sum(sum),
-    .cbout(cbout)
-    );
+    adder_subtractor dut(
+        .a(a),
+        .b(b),
+        .mode(mode),
+        .cbout(cbout),
+        .sum(sum)
+        );
     
-    //test cases
+    //test cases for addition and subtraction
     initial begin
-       mode = 0, a[1] = 0, a[0] = 0, b[1] = 0, b[0] = 1
-        $finish;
+       mode = 0; a[1] = 0; a[0] = 0; b[1] = 0; b[0] = 1; #10;
+       mode = 0; a[1] = 0; a[0] = 0; b[1] = 1; b[0] = 0; #10;
+       mode = 0; a[1] = 0; a[0] = 0; b[1] = 1; b[0] = 1; #10;
+       mode = 0; a[1] = 0; a[0] = 1; b[1] = 0; b[0] = 1; #10;
+       mode = 0; a[1] = 1; a[0] = 0; b[1] = 0; b[0] = 1; #10;
+       mode = 0; a[1] = 1; a[0] = 0; b[1] = 0; b[0] = 0; #10;
+       
+       mode = 1; a[1] = 0; a[0] = 0; b[1] = 0; b[0] = 1; #10;
+       mode = 1; a[1] = 0; a[0] = 0; b[1] = 1; b[0] = 0; #10;
+       mode = 1; a[1] = 0; a[0] = 0; b[1] = 1; b[0] = 1; #10;
+       mode = 1; a[1] = 0; a[0] = 1; b[1] = 0; b[0] = 1; #10;
+       mode = 1; a[1] = 1; a[0] = 0; b[1] = 0; b[0] = 1; #10;
+       mode = 1; a[1] = 1; a[0] = 0; b[1] = 0; b[0] = 0; #10;
+       
+       $finish;
     end
 endmodule

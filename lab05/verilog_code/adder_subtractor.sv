@@ -23,14 +23,16 @@
 module adder_subtractor(
     input [1:0] a, b,
     input mode,
-    output [1:0] sum,
-    output cbout
+    output cbout,
+    output [1:0] sum
     );
     
     wire c1, c2;
     wire [1:0] b_add;
     
-    assign b_add = b ^ mode;
+    //Invert b input for subtraction
+    assign b_add[0] = b[0] ^ mode;
+    assign b_add[1] = b[1] ^ mode;
     
     //the first full adder
     full_adder fa0(
@@ -44,12 +46,12 @@ module adder_subtractor(
     //the second full adder
     full_adder fa1(
         .a(a[1]),
-        .b(b[1]),
+        .b(b_add[1]),
         .cin(c1),
         .cout(c2),
         .s(sum[1])
     );
     
     //Convert carry to borrow when subtracting
-    assign cbout = c2 ^ mode;
+    assign cbout =  c2 ^ mode;
 endmodule

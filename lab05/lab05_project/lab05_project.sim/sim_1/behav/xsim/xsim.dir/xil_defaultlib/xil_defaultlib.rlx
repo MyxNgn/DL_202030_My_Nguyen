@@ -3,7 +3,9 @@
 May 27 2020
 20:09:33
 H:/DL_202030_My_Nguyen/lab05/lab05_project/lab05_project.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
-H:/DL_202030_My_Nguyen/lab05/verilog_code/full_adder.v,1600799862,verilog,,,,full_adder,,,,,,,,
+H:/DL_202030_My_Nguyen/lab05/verilog_code/adder_subtractor.sv,1601499463,systemVerilog,,H:/DL_202030_My_Nguyen/lab05/verilog_code/half_adder.sv,,adder_subtractor,,,,,,,,
+H:/DL_202030_My_Nguyen/lab05/verilog_code/adder_subtractor_test.sv,1601499802,systemVerilog,,,,adder_subtractor_test,,,,,,,,
+H:/DL_202030_My_Nguyen/lab05/verilog_code/full_adder.v,1601496907,verilog,,,,full_adder,,,,,,,,
 H:/DL_202030_My_Nguyen/lab05/verilog_code/full_adder_test.sv,1600799739,systemVerilog,,,,full_adder_test,,,,,,,,
-H:/DL_202030_My_Nguyen/lab05/verilog_code/half_adder.sv,1600795196,systemVerilog,,H:/DL_202030_My_Nguyen/lab05/verilog_code/full_adder_test.sv,,half_adder,,,,,,,,
+H:/DL_202030_My_Nguyen/lab05/verilog_code/half_adder.sv,1600795196,systemVerilog,,H:/DL_202030_My_Nguyen/lab05/verilog_code/adder_subtractor_test.sv,,half_adder,,,,,,,,
 H:/DL_202030_My_Nguyen/lab05/verilog_code/half_adder_test.v,1600798442,verilog,,,,half_adder_test,,,,,,,,
