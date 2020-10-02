@@ -1,0 +1,97 @@
+% Digital Logic Report Template
+% Created: 2020-01-10, John Miller
+
+%==========================================================
+%=========== Document Setup  ==============================
+
+% Formatting defined by class file
+\documentclass[11pt]{article}
+
+% ---- Document formatting ----
+\usepackage[margin=1in]{geometry}	% Narrower margins
+\usepackage{booktabs}				% Nice formatting of tables
+\usepackage{graphicx}				% Ability to include graphics
+
+%\setlength\parindent{0pt}	% Do not indent first line of paragraphs 
+\usepackage[parfill]{parskip}		% Line space b/w paragraphs
+%	parfill option prevents last line of pgrph from being fully justified
+
+% Parskip package adds too much space around titles, fix with this
+\RequirePackage{titlesec}
+\titlespacing\section{0pt}{8pt plus 4pt minus 2pt}{3pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{4pt plus 4pt minus 2pt}{-2pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{2pt plus 4pt minus 2pt}{-6pt plus 2pt minus 2pt}
+
+% ---- Hyperlinks ----
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}	% For URL's. Automatically links internal references.
+
+% ---- Code listings ----
+\usepackage{listings} 					% Nice code layout and inclusion
+\usepackage[usenames,dvipsnames]{xcolor}	% Colors (needs to be defined before using colors)
+
+% Define custom colors for listings
+\definecolor{listinggray}{gray}{0.98}		% Listings background color
+\definecolor{rulegray}{gray}{0.7}			% Listings rule/frame color
+
+% Style for Verilog
+\lstdefinestyle{Verilog}{
+	language=Verilog,					% Verilog
+	backgroundcolor=\color{listinggray},	% light gray background
+	rulecolor=\color{blue}, 			% blue frame lines
+	frame=tb,							% lines above & below
+	linewidth=\columnwidth, 			% set line width
+	basicstyle=\small\ttfamily,	% basic font style that is used for the code	
+	breaklines=true, 					% allow breaking across columns/pages
+	tabsize=3,							% set tab size
+	commentstyle=\color{gray},	% comments in italic 
+	stringstyle=\upshape,				% strings are printed in normal font
+	showspaces=false,					% don't underscore spaces
+}
+
+% How to use: \Verilog[listing_options]{file}
+\newcommand{\Verilog}[2][]{%
+	\lstinputlisting[style=Verilog,#1]{#2}
+}
+
+\begin{document}
+
+\title{ELC 2137 Lab 05: Verilog Intro}
+\author{My Nguyen}
+
+\maketitle
+
+\section*{Summary}
+This lab purpose is to learn the basic Verilog syntax, organize files and folder structure to recreate half-adder, full-adder, and 2-bit adder/subtractor. First, familiarize by creating a RTL project using Basys3 board. From this create a half-adder file and populate it with code and logic for a half-adder, then create a test file to exhaustively test it. Repeat this process for full-adder and 2-bit adder/subtractor. 
+
+\section*{Table and Figure}
+%table and simulation in a single figure environment
+\begin{figure}[ht]
+	\centering
+	
+	\includegraphics[width=\textwidth,trim=40cm 30cm 2cm 8cm,clip]{"half_adder"}
+	\caption{Half Adder ERT}
+	\includegraphics[width=\textwidth,trim=40cm 30cm 2cm 8cm,clip]{"full_adder"}
+	\caption{Full Adder ERT}
+	\includegraphics[width=\textwidth,trim=40cm 25cm 2cm 8cm,clip]{"adder_subtractor"}
+	\caption{2-bit Adder/Subtractor ERT}
+\end{figure}
+
+\section*{Code}
+\Verilog[firstline=23, caption=Half Adder Implementation]{../verilog_code/half_adder.sv}
+\Verilog[firstline=23,caption=Half Adder Test Bench]{../verilog_code/half_adder_test.v}
+\Verilog[firstline=23,caption=Full Adder Implementation]{../verilog_code/full_adder.v}
+\Verilog[firstline=23,caption=Full Adder Test Bench]{../verilog_code/full_adder_test.sv}
+\Verilog[firstline=23,caption=2-bit Adder/Subtractor Implementation]{../verilog_code/adder_subtractor.sv}
+\Verilog[firstline=23,caption=2-bit Adder/Subtractor Test Bench]{../verilog_code/adder_subtractor_test.sv}
+\section*{Screenshot}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth]{"lab5_block_diagram"}
+	\caption{Block Diagrams}
+\end{figure}
+
+\section*{Questions}
+4. The simulations matches exact the result from lab 3 and lab 4. \\
+5. One thing I still cannot figure out is how to assign value to a multi-bit variable using another multi-bit variable.
+
+\end{document}
