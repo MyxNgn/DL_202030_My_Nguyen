@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log sseg1_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sseg1_test.tcl
+EAStep vivado -log wrap.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source wrap.tcl

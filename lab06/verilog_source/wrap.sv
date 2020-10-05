@@ -21,7 +21,6 @@
 
 //created to streamline the block diagram
 module wrap(
-    input clk,
     input [15:0] sw,
     output [3:0] an, 
     output [6:0] seg,

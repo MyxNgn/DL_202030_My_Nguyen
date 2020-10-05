@@ -2,11 +2,11 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Wed Sep 30 17:29:10 2020
-# Process ID: 12080
+# Start of session at: Mon Oct  5 16:15:21 2020
+# Process ID: 15196
 # Current directory: H:/DL_202030_My_Nguyen/lab06/lab06_project/lab06_project.runs/synth_1
-# Command line: vivado.exe -log sseg1_test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sseg1_test.tcl
-# Log file: H:/DL_202030_My_Nguyen/lab06/lab06_project/lab06_project.runs/synth_1/sseg1_test.vds
+# Command line: vivado.exe -log wrap.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source wrap.tcl
+# Log file: H:/DL_202030_My_Nguyen/lab06/lab06_project/lab06_project.runs/synth_1/wrap.vds
 # Journal file: H:/DL_202030_My_Nguyen/lab06/lab06_project/lab06_project.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source sseg1_test.tcl -notrace
+source wrap.tcl -notrace

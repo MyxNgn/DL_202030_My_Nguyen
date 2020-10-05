@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1601504947">
-  <File Type="PA-TCL" Name="sseg1_test.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="sseg1_test_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="sseg1_test_reports.tcl"/>
-  <File Type="RDS-RDS" Name="sseg1_test.vds"/>
-  <File Type="RDS-UTIL" Name="sseg1_test_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="sseg1_test_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="sseg1_test.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="sseg1_test_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="sseg1_test_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1601932516">
+  <File Type="PA-TCL" Name="wrap.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="wrap_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="wrap_reports.tcl"/>
+  <File Type="RDS-RDS" Name="wrap.vds"/>
+  <File Type="RDS-UTIL" Name="wrap_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="wrap_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="wrap.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="wrap_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="wrap_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../verilog_source/mux2_4b.sv">
@@ -41,6 +41,7 @@
     </File>
     <File Path="$PPRDIR/../verilog_source/sseg1_test.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -64,7 +65,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="sseg1_test"/>
+      <Option Name="TopModule" Val="wrap"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
