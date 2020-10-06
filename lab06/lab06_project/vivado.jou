@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Oct  6 11:17:17 2020
+# Process ID: 14672
+# Current directory: H:/DL_202030_My_Nguyen/lab06/lab06_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5892 H:\DL_202030_My_Nguyen\lab06\lab06_project\lab06_project.xpr
+# Log file: H:/DL_202030_My_Nguyen/lab06/lab06_project/vivado.log
+# Journal file: H:/DL_202030_My_Nguyen/lab06/lab06_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project H:/DL_202030_My_Nguyen/lab06/lab06_project/lab06_project.xpr
+update_compile_order -fileset sources_1

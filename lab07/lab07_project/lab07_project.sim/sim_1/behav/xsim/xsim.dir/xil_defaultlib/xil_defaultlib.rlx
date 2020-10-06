@@ -1,0 +1,11 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+H:/DL_202030_My_Nguyen/lab07/lab07_project/lab07_project.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+H:/DL_202030_My_Nguyen/lab07/lab07_project/lab07_project.srcs/sources_1/new/bcd11.sv,1602009126,systemVerilog,,H:/DL_202030_My_Nguyen/lab07/lab07_project/lab07_project.srcs/sources_1/new/bcd11_test.sv,,bcd11,,,,,,,,
+H:/DL_202030_My_Nguyen/lab07/lab07_project/lab07_project.srcs/sources_1/new/bcd11_test.sv,1602009247,systemVerilog,,,,bcd11_test,,,,,,,,
+H:/DL_202030_My_Nguyen/lab07/lab07_project/lab07_project.srcs/sources_1/new/bcd6.sv,1602005755,systemVerilog,,H:/DL_202030_My_Nguyen/lab07/lab07_project/lab07_project.srcs/sources_1/new/bcd6_test.sv,,bcd6,,,,,,,,
+H:/DL_202030_My_Nguyen/lab07/lab07_project/lab07_project.srcs/sources_1/new/bcd6_test.sv,1602003959,systemVerilog,,,,bcd6_test,,,,,,,,
+H:/DL_202030_My_Nguyen/lab07/verilog_code/add3.sv,1602001567,systemVerilog,,H:/DL_202030_My_Nguyen/lab07/lab07_project/lab07_project.srcs/sources_1/new/bcd11.sv,,add3,,,,,,,,
+H:/DL_202030_My_Nguyen/lab07/verilog_code/add3_test.sv,1602004335,systemVerilog,,,,add3_test,,,,,,,,
