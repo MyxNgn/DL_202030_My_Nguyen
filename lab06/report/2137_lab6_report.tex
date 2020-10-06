@@ -1,0 +1,99 @@
+% Digital Logic Report Template
+% Created: 2020-01-10, John Miller
+
+%==========================================================
+%=========== Document Setup  ==============================
+
+% Formatting defined by class file
+\documentclass[11pt]{article}
+
+% ---- Document formatting ----
+\usepackage[margin=1in]{geometry}	% Narrower margins
+\usepackage{booktabs}				% Nice formatting of tables
+\usepackage{graphicx}				% Ability to include graphics
+
+%\setlength\parindent{0pt}	% Do not indent first line of paragraphs 
+\usepackage[parfill]{parskip}		% Line space b/w paragraphs
+%	parfill option prevents last line of pgrph from being fully justified
+
+% Parskip package adds too much space around titles, fix with this
+\RequirePackage{titlesec}
+\titlespacing\section{0pt}{8pt plus 4pt minus 2pt}{3pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{4pt plus 4pt minus 2pt}{-2pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{2pt plus 4pt minus 2pt}{-6pt plus 2pt minus 2pt}
+
+% ---- Hyperlinks ----
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}	% For URL's. Automatically links internal references.
+
+% ---- Code listings ----
+\usepackage{listings} 					% Nice code layout and inclusion
+\usepackage[usenames,dvipsnames]{xcolor}	% Colors (needs to be defined before using colors)
+
+% Define custom colors for listings
+\definecolor{listinggray}{gray}{0.98}		% Listings background color
+\definecolor{rulegray}{gray}{0.7}			% Listings rule/frame color
+
+% Style for Verilog
+\lstdefinestyle{Verilog}{
+	language=Verilog,					% Verilog
+	backgroundcolor=\color{listinggray},	% light gray background
+	rulecolor=\color{blue}, 			% blue frame lines
+	frame=tb,							% lines above & below
+	linewidth=\columnwidth, 			% set line width
+	basicstyle=\small\ttfamily,	% basic font style that is used for the code	
+	breaklines=true, 					% allow breaking across columns/pages
+	tabsize=3,							% set tab size
+	commentstyle=\color{gray},	% comments in italic 
+	stringstyle=\upshape,				% strings are printed in normal font
+	showspaces=false,					% don't underscore spaces
+}
+
+% How to use: \Verilog[listing_options]{file}
+\newcommand{\Verilog}[2][]{%
+	\lstinputlisting[style=Verilog,#1]{#2}
+}
+
+\begin{document}
+
+\title{ELC 2137 Lab 06: MUX and 7-segment decoder}
+\author{My Nguyen}
+
+\maketitle
+
+\section*{Summary}
+This lab's purpose is to set up a circuit to display an 8-bit number on two 7-segment displays using Verilog. First, create a multiplexer to switch between the two displays, each display will use 4 bits. Secondly, create a seven-segment decoder to covert the output from the multiplexer into hexadecimal digit for the 7-segment LED display. Then, a top-level module is created to wrap around the multiplexer and decoder proving input and output. Finally, import a constraint file for Basys3 board and create a bitstream file for Basys3 board. 
+
+\section*{Table and Figure}
+%table and simulation in a single figure environment
+\begin{figure}[ht]
+	\centering
+	
+	\includegraphics[width=\textwidth,trim=37cm 30cm 1cm 8cm,clip]{"mux2_4b"}
+	\caption{Multiplexer ERT}
+	\includegraphics[width=\textwidth,trim=35cm 30cm 1cm 8cm,clip]{"decoder"}
+	\caption{7-bit Decoder ERT}
+	\includegraphics[width=\textwidth,trim=37cm 25cm 1cm 8cm,clip]{"sseg1_test"}
+	\caption{sseg1 ERT}
+\end{figure}
+
+\section*{Code}
+\Verilog[firstline=23, caption=Multiplexer Implementation]{../verilog_source/mux2_4b.sv}
+\Verilog[firstline=23,caption=Multiplexer Test Bench]{../verilog_source/mux2_4b_test.sv}
+\Verilog[firstline=23,caption=7-bit Decoder Implementation]{../verilog_source/sseg_decoder.sv}
+\Verilog[firstline=23,caption=7-bit Decoder Test Bench]{../verilog_source/sseg_decoder_test.sv}
+\Verilog[firstline=23,caption=Decoder Wrap Implementation]{../verilog_source/wrap.sv}
+\Verilog[firstline=23,caption=Decoder Wrap Test Bench]{../verilog_source/sseg1_test.sv}
+
+\section*{Screenshot}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=12cm]{"board1"}
+	\caption{First digit}
+	\includegraphics[width=12cm]{"board2"}
+	\caption{Second digit}
+\end{figure}
+
+\section*{Questions}
+3. Most errors found where from typo and misunderstanding the prompt. A particular happens with created a bitstream file, where if you don't get the decoder wrap file as top, it will not causes an error telling you to fix your constrains file. \\
+4. Nine wires are connected to the 7-segment display. If the segments were not all connected together, the decoder output will have to put out 7 different 1-bit signal instead of one 7-bit signal, which will make it harder to create segment display and harder to debug. 
+\end{document}
