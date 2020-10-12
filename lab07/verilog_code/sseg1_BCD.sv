@@ -27,7 +27,7 @@ module sseg1_BCD(
     output dp 
     );
     
-    wire [3:0] bcd_ones, bcd_tens, convert;
+    wire [3:0] bcd_ones, bcd_tens, convert, hundreds, thousands;
     
     bcd11 main(
         .in(sw[10:0]),

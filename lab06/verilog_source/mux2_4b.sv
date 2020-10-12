@@ -26,5 +26,5 @@ module mux2_4b(
     output [3:0] out
     );
     
-    assign out = se1 ?  in0 : in1;
+    assign out = se1 ?  in1 : in0;
 endmodule
