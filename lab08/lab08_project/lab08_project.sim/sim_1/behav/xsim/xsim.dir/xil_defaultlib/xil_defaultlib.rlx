@@ -1,0 +1,13 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+H:/DL_202030_My_Nguyen/lab07/verilog_code/add3.sv,1602001567,systemVerilog,,H:/DL_202030_My_Nguyen/lab07/verilog_code/bcd11.sv,,add3,,,,,,,,
+H:/DL_202030_My_Nguyen/lab07/verilog_code/bcd11.sv,1602009126,systemVerilog,,,,bcd11,,,,,,,,
+H:/DL_202030_My_Nguyen/lab08/lab08_project/lab08_project.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+H:/DL_202030_My_Nguyen/lab08/source_code/an_decoder.sv,1602609798,systemVerilog,,H:/DL_202030_My_Nguyen/lab08/source_code/an_decoder_test.sv,,an_decoder,,,,,,,,
+H:/DL_202030_My_Nguyen/lab08/source_code/an_decoder_test.sv,1602610082,systemVerilog,,,,an_decoder_test,,,,,,,,
+H:/DL_202030_My_Nguyen/lab08/source_code/mux2.sv,1602608083,systemVerilog,,H:/DL_202030_My_Nguyen/lab08/source_code/mux2_test.sv,,mux2,,,,,,,,
+H:/DL_202030_My_Nguyen/lab08/source_code/mux2_test.sv,1602608237,systemVerilog,,,,mux2_test,,,,,,,,
+H:/DL_202030_My_Nguyen/lab08/source_code/mux4.sv,1602608676,systemVerilog,,H:/DL_202030_My_Nguyen/lab08/source_code/mux4_test.sv,,mux4,,,,,,,,
+H:/DL_202030_My_Nguyen/lab08/source_code/mux4_test.sv,1602609286,systemVerilog,,,,mux4_test,,,,,,,,

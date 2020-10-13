@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1602614229">
+  <File Type="BITSTR-BMM" Name="sseg4_manual_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="sseg4_manual_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="sseg4_manual_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="sseg4_manual_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="sseg4_manual.tcl"/>
+  <File Type="OPT-TIMING" Name="sseg4_manual_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="sseg4_manual_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="sseg4_manual_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="sseg4_manual_reports.tcl"/>
+  <File Type="OPT-DRC" Name="sseg4_manual_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="sseg4_manual.hwdef"/>
+  <File Type="PWROPT-DCP" Name="sseg4_manual_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="sseg4_manual_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="sseg4_manual_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="sseg4_manual_placed.dcp"/>
+  <File Type="PLACE-IO" Name="sseg4_manual_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="sseg4_manual_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="sseg4_manual_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="sseg4_manual_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="sseg4_manual_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="sseg4_manual_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="sseg4_manual_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="sseg4_manual_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="sseg4_manual_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="sseg4_manual.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="sseg4_manual_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="sseg4_manual_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="sseg4_manual_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="sseg4_manual.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="sseg4_manual_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="sseg4_manual_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="sseg4_manual_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="sseg4_manual_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="sseg4_manual_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="sseg4_manual_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="sseg4_manual_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="sseg4_manual.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="sseg4_manual_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="sseg4_manual_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="sseg4_manual_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="sseg4_manual_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="sseg4_manual_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="sseg4_manual_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="sseg4_manual_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="sseg4_manual_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="sseg4_manual_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="sseg4_manual_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="sseg4_manual_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="sseg4_manual_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="sseg4_manual_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="sseg4_manual_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="sseg4_manual_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="sseg4_manual_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="sseg4_manual_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="sseg4_manual_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="sseg4_manual_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="sseg4_manual_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="sseg4_manual_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="sseg4_manual.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="sseg4_manual_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="sseg4_manual.rbt"/>
+  <File Type="BITSTR-NKY" Name="sseg4_manual.nky"/>
+  <File Type="PDI-FILE" Name="sseg4_manual.pdi"/>
+  <File Type="RCFI_FILE" Name="sseg4_manual.rcfi"/>
+  <File Type="CFI_FILE" Name="sseg4_manual.cfi"/>
+  <File Type="RNPI_FILE" Name="sseg4_manual.rnpi"/>
+  <File Type="NPI_FILE" Name="sseg4_manual.npi"/>
+  <File Type="RBD_FILE" Name="sseg4_manual.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="sseg4_manual.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="sseg4_manual.sysdef"/>
+  <File Type="BG-BGN" Name="sseg4_manual.bgn"/>
+  <File Type="BG-DRC" Name="sseg4_manual.drc"/>
+  <File Type="RDI-RDI" Name="sseg4_manual.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../lab07/verilog_code/add3.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source_code/an_decoder.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../lab07/verilog_code/bcd11.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source_code/mux2.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source_code/mux4.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source_code/sseg4.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../lab06/verilog_source/sseg_decoder.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source_code/sseg4_manual.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source_code/disp.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source_code/basys3.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source_code/an_decoder_test.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source_code/mux2_test.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../source_code/mux4_test.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="sseg4_manual"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../lab06/verilog_source/Basys3.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
