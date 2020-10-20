@@ -1,0 +1,102 @@
+% Digital Logic Report Template
+% Created: 2020-01-10, John Miller
+
+%==========================================================
+%=========== Document Setup  ==============================
+
+% Formatting defined by class file
+\documentclass[11pt]{article}
+
+% ---- Document formatting ----
+\usepackage[margin=1in]{geometry}	% Narrower margins
+\usepackage{booktabs}				% Nice formatting of tables
+\usepackage{graphicx}				% Ability to include graphics
+
+%\setlength\parindent{0pt}	% Do not indent first line of paragraphs 
+\usepackage[parfill]{parskip}		% Line space b/w paragraphs
+%	parfill option prevents last line of pgrph from being fully justified
+
+% Parskip package adds too much space around titles, fix with this
+\RequirePackage{titlesec}
+\titlespacing\section{0pt}{8pt plus 4pt minus 2pt}{3pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{4pt plus 4pt minus 2pt}{-2pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{2pt plus 4pt minus 2pt}{-6pt plus 2pt minus 2pt}
+
+% ---- Hyperlinks ----
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}	% For URL's. Automatically links internal references.
+
+% ---- Code listings ----
+\usepackage{listings} 					% Nice code layout and inclusion
+\usepackage[usenames,dvipsnames]{xcolor}	% Colors (needs to be defined before using colors)
+
+% Define custom colors for listings
+\definecolor{listinggray}{gray}{0.98}		% Listings background color
+\definecolor{rulegray}{gray}{0.7}			% Listings rule/frame color
+
+% Style for Verilog
+\lstdefinestyle{Verilog}{
+	language=Verilog,					% Verilog
+	backgroundcolor=\color{listinggray},	% light gray background
+	rulecolor=\color{blue}, 			% blue frame lines
+	frame=tb,							% lines above & below
+	linewidth=\columnwidth, 			% set line width
+	basicstyle=\small\ttfamily,	% basic font style that is used for the code	
+	breaklines=true, 					% allow breaking across columns/pages
+	tabsize=3,							% set tab size
+	commentstyle=\color{gray},	% comments in italic 
+	stringstyle=\upshape,				% strings are printed in normal font
+	showspaces=false,					% don't underscore spaces
+}
+
+% How to use: \Verilog[listing_options]{file}
+\newcommand{\Verilog}[2][]{%
+	\lstinputlisting[style=Verilog,#1]{#2}
+}
+
+\begin{document}
+
+\title{ELC 2137 Lab 07: Binary Coded Decimal}
+\author{My Nguyen}
+
+\maketitle
+
+\section*{Summary}
+This lab's purpose is to implement the double-dabble algorithm to convert hex values into binary coded decimal (BCD) using Verilog. The double-dabble algorithm, could be divided into to two parts shifting the code and adding to 3 to any binary number that is larger than 4. First, add3 file is created to detect any binary number larger than 4 and add 3 to it. Then, bcd6 and bcd11 modules were created to convert a 6-bit and 11-bit input to BCD using multiple add3 modules. Finally, create a top-level module named sseg1\_BCD which uses all 16 switches, bcd11 module, mux2\_4b and sseg\_decoder and output to the seven segment display.
+
+\section*{Table and Figure}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth,trim=24cm 23cm 0.5cm 5cm,clip]{"add3"}
+	\caption{Add3 ERT}
+	\includegraphics[width=\textwidth,trim=24cm 23cm 0.5cm 5cm,clip]{"bcd6"}
+	\caption{6-bit BCD Convertor ERT}
+	\includegraphics[width=\textwidth,trim=24cm 22cm 0.5cm 5cm,clip]{"bcd11"}
+	\caption{11-bit BCD Convertor ERT}
+\end{figure}
+
+\section*{Code}
+\Verilog[firstline=23,caption=Add3 Implementation]{../verilog_code/add3.sv}
+\Verilog[firstline=23,caption=Add3 Test Bench]{../verilog_code/add3_test.sv}
+\Verilog[firstline=23,caption=6-bit BCD Convertor Implementation]{../verilog_code/bcd6.sv}
+\Verilog[firstline=23,caption=6-bit BCD Convertor Test Bench]{../verilog_code/bcd6_test.sv}
+\Verilog[firstline=23,caption=11-bit BCD Convertor Implementation]{../verilog_code/bcd11.sv}
+\Verilog[firstline=23,caption=11-bit BCD Convertor Test Bench]{../verilog_code/bcd11_test.sv}
+\Verilog[firstline=23,caption=11-bit BCD Convertor Test Bench]{../verilog_code/sseg1_BCD.sv}
+
+\section*{Screenshot}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=12cm]{"board1"}
+	\caption{First digit}
+\end{figure}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=12cm]{"board2"}
+	\caption{Second digit}
+	\includegraphics[width=12cm]{"schematic"}
+	\caption{11-bit Convertor Schematic}
+\end{figure}
+
+%\section*{Questions}
+
+\end{document}
