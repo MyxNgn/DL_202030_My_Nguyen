@@ -25,6 +25,7 @@ module top_lab9(
         input btnU, btnD, btnC, clk,
         output [15:0] led
     );
+    //in this circuit the first number inputed is stored as in1
     
     wire [7:0] regist_alu;
     register #(.N(8)) register0(

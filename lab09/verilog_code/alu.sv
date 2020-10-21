@@ -40,7 +40,7 @@ module alu #( parameter N =8)(
                 AND: out = in0 & in1;
                 OR: out = in0 | in1;
                 XOR: out = in0 ^ in1;
-                default : out = in0 ;
+                default : out = in0 ; 
             endcase
         end
 endmodule

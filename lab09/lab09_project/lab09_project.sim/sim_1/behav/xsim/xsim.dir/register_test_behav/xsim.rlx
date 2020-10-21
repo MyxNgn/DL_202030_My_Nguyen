@@ -1,11 +1,11 @@
 
 { 
-    crc :  16890620828001227801  , 
+    crc :  5502770876068684672  , 
     ccp_crc :  0  , 
     cmdline : " -wto 7458d9dfcb7745a29ca64ed243417f39 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot register_test_behav xil_defaultlib.register_test xil_defaultlib.glbl" , 
     buildDate : "May 27 2020" , 
     buildTime : "20:09:33" , 
-    linkCmd : "C:\\XilinxVivado\\Vivado\\2020.1\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/register_test_behav/xsimk.exe\"   \"xsim.dir/register_test_behav/obj/xsim_0.win64.obj\" \"xsim.dir/register_test_behav/obj/xsim_1.win64.obj\" -L\"C:\\XilinxVivado\\Vivado\\2020.1\\lib\\win64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    linkCmd : "C:\\XilinxVitis\\Vivado\\2020.1\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/register_test_behav/xsimk.exe\"   \"xsim.dir/register_test_behav/obj/xsim_0.win64.obj\" \"xsim.dir/register_test_behav/obj/xsim_1.win64.obj\" -L\"C:\\XilinxVitis\\Vivado\\2020.1\\lib\\win64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
     aggregate_nets : 
     [ 
     ] 
