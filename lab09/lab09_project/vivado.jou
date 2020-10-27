@@ -2,10 +2,10 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Wed Oct 21 12:35:43 2020
-# Process ID: 14556
+# Start of session at: Fri Oct 23 11:02:44 2020
+# Process ID: 12316
 # Current directory: H:/DL_202030_My_Nguyen/lab09/lab09_project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11652 H:\DL_202030_My_Nguyen\lab09\lab09_project\lab09_project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1416 H:\DL_202030_My_Nguyen\lab09\lab09_project\lab09_project.xpr
 # Log file: H:/DL_202030_My_Nguyen/lab09/lab09_project/vivado.log
 # Journal file: H:/DL_202030_My_Nguyen/lab09/lab09_project\vivado.jou
 #-----------------------------------------------------------
@@ -24,45 +24,3 @@ set_property PROGRAM.FILE {H:/DL_202030_My_Nguyen/lab09/lab09_project/lab09_proj
 program_hw_devices [get_hw_devices xc7a35t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 close_hw_manager
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top alu_test [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top alu_test [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-launch_simulation
-source alu_test.tcl
-close_sim
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top register_test [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-launch_simulation
-source register_test.tcl
-close_sim
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top basys3_lab9 [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top basys3_lab9 [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-launch_simulation
-source basys3_lab9.tcl
-close_sim
-launch_simulation
-source basys3_lab9.tcl
-close_sim
