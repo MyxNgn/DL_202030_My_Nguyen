@@ -70,8 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
+set_param chipscope.maxJobs 1
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -82,7 +83,6 @@ set_property webtalk.parent_dir H:/DL_202030_My_Nguyen/lab10/lab10_project/lab10
 set_property parent.project_path H:/DL_202030_My_Nguyen/lab10/lab10_project/lab10_project.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
 set_property ip_output_repo h:/DL_202030_My_Nguyen/lab10/lab10_project/lab10_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
