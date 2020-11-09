@@ -23,26 +23,26 @@
 module calc_lab10(
         input [15:0]sw,
         input btnC, btnD, btnU, clk,
+        output [15:0] led,
         output [6:0] seg,
         output [3:0] an,
         output dp
     );
     
-    wire [15:0] tmpLED;
+    //wire [15:0] tmpLED;
     top_lab9 dut(
         .sw(sw[11:0]),
         .btnU(btnU),
         .btnD(btnD),
         .btnC(btnC),
         .clk(clk),
-        .led(tmpLED)
+        .led(led)
         );
     
     wire [15:0] Dout_sseg4;
     wire sign_sseg4;
-    
     show_2c show0(
-        .Din(tmpLED[15:8]),
+        .Din(led[15:8]),
         .Dout(Dout_sseg4),
         .sign(sign_sseg4)
         );

@@ -2,11 +2,11 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu Oct 29 13:43:10 2020
-# Process ID: 11780
+# Start of session at: Tue Nov  3 12:14:54 2020
+# Process ID: 16488
 # Current directory: H:/DL_202030_My_Nguyen/lab10/lab10_project/lab10_project.runs/impl_1
-# Command line: vivado.exe -log wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source wrapper.tcl -notrace
-# Log file: H:/DL_202030_My_Nguyen/lab10/lab10_project/lab10_project.runs/impl_1/wrapper.vdi
+# Command line: vivado.exe -log calc_lab10.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source calc_lab10.tcl -notrace
+# Log file: H:/DL_202030_My_Nguyen/lab10/lab10_project/lab10_project.runs/impl_1/calc_lab10.vdi
 # Journal file: H:/DL_202030_My_Nguyen/lab10/lab10_project/lab10_project.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
-source wrapper.tcl -notrace
+source calc_lab10.tcl -notrace
