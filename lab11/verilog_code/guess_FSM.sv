@@ -21,12 +21,12 @@
 
 
 module guess_FSM #(parameter N=21)(
-    input clk, rst,
-    input in,
-    output reg [3:0] y,
-    output reg win, lose
+    input clk, rst, en,
+    input [3:0]in, //buttons
+    output reg [3:0] y,// led[3:0]
+    output reg win, lose// led[15:14]
     );
-    localparameter [4:0] 
+    localparam [4:0] 
         s0 = 4'b0000,
         s1 = 4'b0001,
         s2 = 4'b0011,
@@ -38,62 +38,62 @@ module guess_FSM #(parameter N=21)(
     reg [1:0] state, state_next;
     reg [N-1:0] counter, counter_next;
     
-     // state memory (register)
-    always_ff @(posedge clk or posedge rst)
-        if (rst) begin
-        state   <= s0;
-    end
-    else begin
-        state   <= state_next;
-    end
+    // state memory (register)
+    always @(posedge clk, posedge rst, posedge en)
+        if (rst)
+            state <= s0;
+        else if (en)
+            state <= state_next;
+    
   
     // combined next-state and output logic
-   always_comb begin
+    always @* begin
       // default behavior
       state_next  = state;
       
+      
       case(state)
+         //s0 state
          s0: begin
-            y[0] = 4'b0001;
-            if (in == 4'b0001)
+            y = 4'b0001;
+            if (in == y)
                 state_next = swin;
             else if (in == 4'b0000)
                 state_next = s1;
             else
                 state_next = slose;            
          end
-         
+         //s1 state
          s1: begin
-            y[1] = 4'b0010;     
-            counter_next = counter - 1;
-            if (in == 4'b0010)
+            y = 4'b0010;
+            if (in == y)
                 state_next = swin;
             else if (in == 4'b0000)
                 state_next = s2;
             else
                 state_next = slose;  
          end
-         
+         //s2 state
          s2: begin
-            y[2] = 4'b0100;     
-            if (in == 4'b0100)
+            y = 4'b0100;     
+            if (in == y)
                 state_next = swin;
             else if (in == 4'b0000)
                 state_next = s3;
             else
                 state_next = slose;  
          end
-         
+         //s3 state
          s3: begin
-            y[3] = 4'b1000;    
-            if (in == 4'b1000)
+            y = 4'b1000;    
+            if (in == y)
                 state_next = swin;
             else if (in == 4'b0000)
                 state_next = s0;
             else
                 state_next = slose;
          end
-         
+         //win state
          swin: begin
             win = 1'b1;    
             if (in == 4'b0000)
@@ -101,7 +101,7 @@ module guess_FSM #(parameter N=21)(
             else
                 state_next = swin;
          end
-         
+         //lose state
          slose: begin
             lose = 1'b1;    
             if (in == 4'b0000)

@@ -1,0 +1,282 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Nov 10 12:50:00 2020
+# Process ID: 11948
+# Current directory: H:/DL_202030_My_Nguyen/lab11/lab11_project/lab11_project.runs/synth_1
+# Command line: vivado.exe -log guessing_game.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source guessing_game.tcl
+# Log file: H:/DL_202030_My_Nguyen/lab11/lab11_project/lab11_project.runs/synth_1/guessing_game.vds
+# Journal file: H:/DL_202030_My_Nguyen/lab11/lab11_project/lab11_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source guessing_game.tcl -notrace
+Command: synth_design -top guessing_game -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9652
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1110.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'guessing_game' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [H:/DL_202030_My_Nguyen/lab11/verilog_code/debounce.sv:4]
+	Parameter N bound to: 21 - type: integer 
+	Parameter zero bound to: 2'b00 
+	Parameter wait1 bound to: 2'b01 
+	Parameter one bound to: 2'b11 
+	Parameter wait0 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [H:/DL_202030_My_Nguyen/lab11/verilog_code/debounce.sv:4]
+WARNING: [Synth 8-689] width (16) of port connection 'reset' does not match port width (1) of module 'debounce' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:34]
+WARNING: [Synth 8-689] width (16) of port connection 'reset' does not match port width (1) of module 'debounce' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:42]
+WARNING: [Synth 8-689] width (16) of port connection 'reset' does not match port width (1) of module 'debounce' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:50]
+WARNING: [Synth 8-689] width (16) of port connection 'reset' does not match port width (1) of module 'debounce' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'counter' [H:/DL_202030_My_Nguyen/lab10/verilog_code/counter.sv:23]
+	Parameter N bound to: 30 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter' (2#1) [H:/DL_202030_My_Nguyen/lab10/verilog_code/counter.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'counter__parameterized0' [H:/DL_202030_My_Nguyen/lab10/verilog_code/counter.sv:23]
+	Parameter N bound to: 15 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter__parameterized0' (2#1) [H:/DL_202030_My_Nguyen/lab10/verilog_code/counter.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [H:/DL_202030_My_Nguyen/lab08/verilog_code/mux2.sv:23]
+	Parameter BITS bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (3#1) [H:/DL_202030_My_Nguyen/lab08/verilog_code/mux2.sv:23]
+WARNING: [Synth 8-689] width (16) of port connection 'sel' does not match port width (1) of module 'mux2' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:84]
+WARNING: [Synth 8-689] width (2) of port connection 'out' does not match port width (1) of module 'mux2' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:87]
+INFO: [Synth 8-6157] synthesizing module 'guess_FSM' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guess_FSM.sv:23]
+	Parameter N bound to: 21 - type: integer 
+	Parameter s0 bound to: 5'b00000 
+	Parameter s1 bound to: 5'b00001 
+	Parameter s2 bound to: 5'b00011 
+	Parameter s3 bound to: 5'b00010 
+	Parameter swin bound to: 5'b00110 
+	Parameter slose bound to: 5'b00111 
+WARNING: [Synth 8-151] case item 5'b00110 is unreachable [H:/DL_202030_My_Nguyen/lab11/verilog_code/guess_FSM.sv:97]
+WARNING: [Synth 8-151] case item 5'b00111 is unreachable [H:/DL_202030_My_Nguyen/lab11/verilog_code/guess_FSM.sv:105]
+INFO: [Synth 8-6155] done synthesizing module 'guess_FSM' (4#1) [H:/DL_202030_My_Nguyen/lab11/verilog_code/guess_FSM.sv:23]
+WARNING: [Synth 8-689] width (2) of port connection 'en' does not match port width (1) of module 'guess_FSM' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:93]
+INFO: [Synth 8-6155] done synthesizing module 'guessing_game' (5#1) [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1110.906 ; gain = 0.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1110.906 ; gain = 0.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1110.906 ; gain = 0.473
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1110.906 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [H:/DL_202030_My_Nguyen/lab06/verilog_source/Basys3.xdc]
+Finished Parsing XDC File [H:/DL_202030_My_Nguyen/lab06/verilog_source/Basys3.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [H:/DL_202030_My_Nguyen/lab06/verilog_source/Basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/guessing_game_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/guessing_game_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1226.672 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1226.672 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1226.672 ; gain = 116.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1226.672 ; gain = 116.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1226.672 ; gain = 116.238
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'debounce'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    zero |                               00 |                               00
+                   wait1 |                               01 |                               01
+                     one |                               10 |                               11
+                   wait0 |                               11 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'debounce'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1226.672 ; gain = 116.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   21 Bit       Adders := 4     
++---Registers : 
+	               21 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input   21 Bit        Muxes := 4     
+	   4 Input    4 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 23    
+	   3 Input    2 Bit        Muxes := 2     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 9     
+	   4 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1226.672 ; gain = 116.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1226.672 ; gain = 116.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1229.602 ; gain = 119.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1230.992 ; gain = 120.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1236.789 ; gain = 126.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1236.789 ; gain = 126.355
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tick_OBUF with 1st driver pin 'tick_OBUF_inst_i_1/O' [H:/DL_202030_My_Nguyen/lab10/verilog_code/counter.sv:31]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tick_OBUF with 2nd driver pin 'tick_OBUF_inst_i_2/O' [H:/DL_202030_My_Nguyen/lab10/verilog_code/counter.sv:31]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tick_OBUF with 3rd driver pin 'tick_OBUF_inst_i_3/O' [H:/DL_202030_My_Nguyen/lab10/verilog_code/counter.sv:31]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin tick_OBUF with 4th driver pin 'tick_OBUF_inst_i_4/O' [H:/DL_202030_My_Nguyen/lab10/verilog_code/counter.sv:31]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        1|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1236.789 ; gain = 126.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1236.789 ; gain = 126.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1236.789 ; gain = 126.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1236.789 ; gain = 126.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    32|
+|3     |LUT1   |    82|
+|4     |LUT2   |    84|
+|5     |LUT3   |    10|
+|6     |LUT4   |    12|
+|7     |LUT5   |     7|
+|8     |LUT6   |    16|
+|9     |FDCE   |    55|
+|10    |FDPE   |    86|
+|11    |LDC    |     2|
+|12    |IBUF   |     7|
+|13    |OBUF   |     5|
+|14    |OBUFT  |    12|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1236.789 ; gain = 126.355
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 4 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 1236.789 ; gain = 10.590
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1236.789 ; gain = 126.355
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1236.789 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1238.758 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  LDC => LDCE: 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 9 Warnings, 4 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 1238.758 ; gain = 128.324
+INFO: [Common 17-1381] The checkpoint 'H:/DL_202030_My_Nguyen/lab11/lab11_project/lab11_project.runs/synth_1/guessing_game.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file guessing_game_utilization_synth.rpt -pb guessing_game_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 10 12:50:46 2020...

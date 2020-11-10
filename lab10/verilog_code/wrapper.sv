@@ -31,7 +31,7 @@ module wrapper(
     counter #(.N(21)) c(
         .clk(clk),
         .en(1'b1),
-        .rst(btC),
+        .rst(btnC),
         .msb(counter_sseg4)
         );
     
