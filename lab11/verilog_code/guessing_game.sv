@@ -22,19 +22,19 @@
 
 module guessing_game(
     input btnC, btnL, btnR, btnU, btnD, clk,
-    input [15:0]sw,
-    output [15:0] led,
-    output tick
+    input [15:0] sw,
+    output [15:0] led
     );
     
     //debouncing the buttons
+    wire [3:0] tmp;
     wire [3:0] debounced_buttons;
     debounce #(.N(21)) debounce0(
         .clk(clk),
         .reset(sw),
         .in(btnL),
         .out(debounced_buttons[0]),
-        .tick(tick)
+        .tick(tmp[0])
         );
     
     debounce #(.N(21)) debounce1(
@@ -42,7 +42,7 @@ module guessing_game(
         .reset(sw),
         .in(btnD),
         .out(debounced_buttons[1]),
-        .tick(tick)
+        .tick(tmp[1])
         );    
     
     debounce #(.N(21)) debounce2(
@@ -50,7 +50,7 @@ module guessing_game(
         .reset(sw),
         .in(btnR),
         .out(debounced_buttons[2]),
-        .tick(tick)
+        .tick(tmp[2])
         );
         
     debounce #(.N(21)) debounce3(
@@ -58,36 +58,36 @@ module guessing_game(
         .reset(sw),
         .in(btnU),
         .out(debounced_buttons[3]),
-        .tick(tick)
+        .tick(tmp[3])
         );
         
     //creating two counter of different size for mux2 element    
-    wire[1:0] counter_in0;
-    counter #(.N(30)) c0(
+    wire counter_in0;
+    count #(.N(24)) c0(
         .clk(clk),
         .en(1'b1),
         .rst(btnC),
-        .msb(counter_in0)
+        .tick(counter_in0)
         );
         
-    wire[1:0] counter_in1;
-    counter #(.N(15)) c1(
+    wire counter_in1;
+    count #(.N(23)) c1(
         .clk(clk),
         .en(1'b1),
         .rst(btnC),
-        .msb(counter_in1)
+        .tick(counter_in1)
         );
     
     //mux2 element sending out signal for guess_FSM    
     wire[1:0] mux_guess;    
-    mux #(.BITS(1)) mux0(
-        .sel(sw), //use to adjust difficulty
-        .in1(counter_in1[1]),
-        .in0(counter_in0[1]),
+    mux mux0(
+        .sel(sw[0]), //use to adjust difficulty
+        .in1(counter_in1),
+        .in0(counter_in0),
         .out(mux_guess)
         );
         
-    guess_FSM #(.N(21)) main(
+    guess_FSM main(
         .clk(clk),
         .rst(btnC),
         .en(mux_guess),

@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Tue Nov 10 12:50:54 2020
-# Process ID: 12524
+# Start of session at: Tue Nov 17 13:38:26 2020
+# Process ID: 12420
 # Current directory: H:/DL_202030_My_Nguyen/lab11/lab11_project/lab11_project.runs/impl_1
 # Command line: vivado.exe -log guessing_game.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source guessing_game.tcl -notrace
 # Log file: H:/DL_202030_My_Nguyen/lab11/lab11_project/lab11_project.runs/impl_1/guessing_game.vdi
