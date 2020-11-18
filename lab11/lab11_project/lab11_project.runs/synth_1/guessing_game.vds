@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Tue Nov 17 13:37:32 2020
-# Process ID: 13476
+# Start of session at: Wed Nov 18 15:04:10 2020
+# Process ID: 1940
 # Current directory: H:/DL_202030_My_Nguyen/lab11/lab11_project/lab11_project.runs/synth_1
 # Command line: vivado.exe -log guessing_game.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source guessing_game.tcl
 # Log file: H:/DL_202030_My_Nguyen/lab11/lab11_project/lab11_project.runs/synth_1/guessing_game.vds
@@ -17,9 +17,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13496
+INFO: [Synth 8-7075] Helper process launched with PID 6680
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1028.156 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1111.750 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'guessing_game' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'debounce' [H:/DL_202030_My_Nguyen/lab11/verilog_code/debounce.sv:4]
@@ -29,19 +29,15 @@ INFO: [Synth 8-6157] synthesizing module 'debounce' [H:/DL_202030_My_Nguyen/lab1
 	Parameter one bound to: 2'b11 
 	Parameter wait0 bound to: 2'b10 
 INFO: [Synth 8-6155] done synthesizing module 'debounce' (1#1) [H:/DL_202030_My_Nguyen/lab11/verilog_code/debounce.sv:4]
-WARNING: [Synth 8-689] width (16) of port connection 'reset' does not match port width (1) of module 'debounce' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:34]
-WARNING: [Synth 8-689] width (16) of port connection 'reset' does not match port width (1) of module 'debounce' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:42]
-WARNING: [Synth 8-689] width (16) of port connection 'reset' does not match port width (1) of module 'debounce' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:50]
-WARNING: [Synth 8-689] width (16) of port connection 'reset' does not match port width (1) of module 'debounce' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:58]
 INFO: [Synth 8-6157] synthesizing module 'count' [H:/DL_202030_My_Nguyen/lab11/verilog_code/count.sv:23]
 	Parameter N bound to: 24 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'count' (2#1) [H:/DL_202030_My_Nguyen/lab11/verilog_code/count.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'count__parameterized0' [H:/DL_202030_My_Nguyen/lab11/verilog_code/count.sv:23]
 	Parameter N bound to: 23 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'count__parameterized0' (2#1) [H:/DL_202030_My_Nguyen/lab11/verilog_code/count.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'mux' [H:/DL_202030_My_Nguyen/lab11/verilog_code/mux.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'mux' (3#1) [H:/DL_202030_My_Nguyen/lab11/verilog_code/mux.sv:23]
-WARNING: [Synth 8-689] width (2) of port connection 'out' does not match port width (1) of module 'mux' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:87]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [H:/DL_202030_My_Nguyen/lab08/verilog_code/mux2.sv:23]
+	Parameter BITS bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (3#1) [H:/DL_202030_My_Nguyen/lab08/verilog_code/mux2.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'guess_FSM' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guess_FSM.sv:23]
 	Parameter s0 bound to: 3'b000 
 	Parameter s1 bound to: 3'b001 
@@ -49,23 +45,35 @@ INFO: [Synth 8-6157] synthesizing module 'guess_FSM' [H:/DL_202030_My_Nguyen/lab
 	Parameter s3 bound to: 3'b010 
 	Parameter swin bound to: 3'b110 
 	Parameter slose bound to: 3'b111 
-INFO: [Synth 8-155] case statement is not full and has no default [H:/DL_202030_My_Nguyen/lab11/verilog_code/guess_FSM.sv:54]
+INFO: [Synth 8-155] case statement is not full and has no default [H:/DL_202030_My_Nguyen/lab11/verilog_code/guess_FSM.sv:52]
 INFO: [Synth 8-6155] done synthesizing module 'guess_FSM' (4#1) [H:/DL_202030_My_Nguyen/lab11/verilog_code/guess_FSM.sv:23]
-WARNING: [Synth 8-689] width (2) of port connection 'en' does not match port width (1) of module 'guess_FSM' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:93]
-INFO: [Synth 8-6155] done synthesizing module 'guessing_game' (5#1) [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'board' [H:/DL_202030_My_Nguyen/lab11/verilog_code/board.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'counter' [H:/DL_202030_My_Nguyen/lab10/verilog_code/counter.sv:23]
+	Parameter N bound to: 21 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter' (5#1) [H:/DL_202030_My_Nguyen/lab10/verilog_code/counter.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'sseg_new' [H:/DL_202030_My_Nguyen/lab11/verilog_code/sseg_new.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mux4' [H:/DL_202030_My_Nguyen/lab08/verilog_code/mux4.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'mux4' (6#1) [H:/DL_202030_My_Nguyen/lab08/verilog_code/mux4.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'sseg_decoder' [H:/DL_202030_My_Nguyen/lab06/verilog_source/sseg_decoder.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'sseg_decoder' (7#1) [H:/DL_202030_My_Nguyen/lab06/verilog_source/sseg_decoder.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'an_decoder' [H:/DL_202030_My_Nguyen/lab08/verilog_code/an_decoder.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'an_decoder' (8#1) [H:/DL_202030_My_Nguyen/lab08/verilog_code/an_decoder.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'sseg_new' (9#1) [H:/DL_202030_My_Nguyen/lab11/verilog_code/sseg_new.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'board' (10#1) [H:/DL_202030_My_Nguyen/lab11/verilog_code/board.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'guessing_game' (11#1) [H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1028.156 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1111.750 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1028.156 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1111.750 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1028.156 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1111.750 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1028.156 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1111.750 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -76,26 +84,26 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/guessing_game_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1045.707 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1220.820 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1045.707 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1220.820 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1045.707 ; gain = 17.551
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1220.820 ; gain = 109.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1045.707 ; gain = 17.551
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1220.820 ; gain = 109.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1045.707 ; gain = 17.551
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1220.820 ; gain = 109.070
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'debounce'
 ---------------------------------------------------------------------------------------------------
@@ -107,11 +115,11 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'debou
                    wait0 |                               11 |                               10
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'debounce'
-WARNING: [Synth 8-327] inferring latch for variable 'y_reg' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guess_FSM.sv:57]
-WARNING: [Synth 8-327] inferring latch for variable 'win_reg' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guess_FSM.sv:97]
+WARNING: [Synth 8-327] inferring latch for variable 'y_reg' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guess_FSM.sv:55]
+WARNING: [Synth 8-327] inferring latch for variable 'win_reg' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guess_FSM.sv:95]
 WARNING: [Synth 8-327] inferring latch for variable 'lose_reg' [H:/DL_202030_My_Nguyen/lab11/verilog_code/guess_FSM.sv:103]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1045.707 ; gain = 17.551
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1220.820 ; gain = 109.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -119,19 +127,21 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   21 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 2     
 +---Registers : 
 	               21 Bit    Registers := 4     
 	                3 Bit    Registers := 1     
 +---Muxes : 
 	   4 Input   21 Bit        Muxes := 4     
 	   7 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 2     
 	   2 Input    3 Bit        Muxes := 12    
 	   3 Input    3 Bit        Muxes := 2     
 	   4 Input    2 Bit        Muxes := 4     
 	   2 Input    2 Bit        Muxes := 16    
-	   2 Input    1 Bit        Muxes := 10    
+	   2 Input    1 Bit        Muxes := 9     
 	   4 Input    1 Bit        Muxes := 8     
-	   7 Input    1 Bit        Muxes := 4     
+	   7 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -148,25 +158,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1045.707 ; gain = 17.551
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1220.820 ; gain = 109.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1045.707 ; gain = 17.551
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1220.820 ; gain = 109.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1051.207 ; gain = 23.051
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1230.598 ; gain = 118.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1053.297 ; gain = 25.141
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1233.504 ; gain = 121.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -184,37 +194,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1058.066 ; gain = 29.910
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1238.297 ; gain = 126.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1058.066 ; gain = 29.910
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1238.297 ; gain = 126.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1058.066 ; gain = 29.910
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1238.297 ; gain = 126.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1058.066 ; gain = 29.910
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1238.297 ; gain = 126.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1058.066 ; gain = 29.910
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1238.297 ; gain = 126.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1058.066 ; gain = 29.910
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1238.297 ; gain = 126.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -231,43 +241,44 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    32|
-|3     |LUT1   |    82|
-|4     |LUT2   |    85|
-|5     |LUT3   |     9|
-|6     |LUT4   |    22|
-|7     |LUT5   |     7|
-|8     |LUT6   |    26|
+|2     |CARRY4 |    38|
+|3     |LUT1   |    85|
+|4     |LUT2   |    92|
+|5     |LUT3   |    10|
+|6     |LUT4   |    34|
+|7     |LUT5   |    11|
+|8     |LUT6   |    23|
 |9     |FDCE   |    58|
 |10    |FDPE   |    87|
-|11    |LD     |     6|
-|12    |LDC    |     3|
-|13    |IBUF   |     7|
-|14    |OBUF   |     6|
-|15    |OBUFT  |    10|
+|11    |FDRE   |    21|
+|12    |LD     |    12|
+|13    |LDC    |     3|
+|14    |IBUF   |     7|
+|15    |OBUF   |    16|
+|16    |OBUFT  |    12|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1058.066 ; gain = 29.910
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1238.297 ; gain = 126.547
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 1058.066 ; gain = 12.359
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1058.066 ; gain = 29.910
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1238.297 ; gain = 17.477
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1238.297 ; gain = 126.547
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1070.129 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 41 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1250.328 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 53 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1070.129 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1250.559 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 9 instances were transformed.
-  LD => LDCE: 6 instances
+  A total of 15 instances were transformed.
+  LD => LDCE: 12 instances
   LDC => LDCE: 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-30 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+42 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1070.129 ; gain = 41.973
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1250.559 ; gain = 138.809
 INFO: [Common 17-1381] The checkpoint 'H:/DL_202030_My_Nguyen/lab11/lab11_project/lab11_project.runs/synth_1/guessing_game.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file guessing_game_utilization_synth.rpt -pb guessing_game_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Nov 17 13:38:18 2020...
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 18 15:04:50 2020...

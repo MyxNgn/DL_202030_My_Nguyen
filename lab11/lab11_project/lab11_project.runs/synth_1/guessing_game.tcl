@@ -70,9 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
+set_param chipscope.maxJobs 1
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -88,10 +87,16 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
+  H:/DL_202030_My_Nguyen/lab08/verilog_code/an_decoder.sv
+  H:/DL_202030_My_Nguyen/lab11/verilog_code/board.sv
   H:/DL_202030_My_Nguyen/lab11/verilog_code/count.sv
+  H:/DL_202030_My_Nguyen/lab10/verilog_code/counter.sv
   H:/DL_202030_My_Nguyen/lab11/verilog_code/debounce.sv
   H:/DL_202030_My_Nguyen/lab11/verilog_code/guess_FSM.sv
-  H:/DL_202030_My_Nguyen/lab11/verilog_code/mux.sv
+  H:/DL_202030_My_Nguyen/lab08/verilog_code/mux2.sv
+  H:/DL_202030_My_Nguyen/lab08/verilog_code/mux4.sv
+  H:/DL_202030_My_Nguyen/lab06/verilog_source/sseg_decoder.sv
+  H:/DL_202030_My_Nguyen/lab11/verilog_code/sseg_new.sv
   H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv
 }
 OPTRACE "Adding files" END { }
