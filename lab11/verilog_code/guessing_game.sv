@@ -23,7 +23,7 @@
 module guessing_game(
     input btnC, btnL, btnR, btnU, btnD, clk,
     input [15:0] sw,
-    output [15:0] led,
+    output [5:0] led,
     output [6:0] seg,
     output [3:0] an,
     output dp
@@ -66,7 +66,7 @@ module guessing_game(
         
     //creating two counter of different size for mux2 element    
     wire counter_in0;
-    count #(.N(24)) c0(
+    count #(.N(26)) c0(
         .clk(clk),
         .en(1'b1),
         .rst(btnC),
@@ -74,7 +74,7 @@ module guessing_game(
         );
         
     wire counter_in1;
-    count #(.N(23)) c1(
+    count #(.N(24)) c1(
         .clk(clk),
         .en(1'b1),
         .rst(btnC),
@@ -90,7 +90,7 @@ module guessing_game(
         .out(mux_guess)
         );
         
-    wire [3:0] win, lose;    
+    wire win, lose;    
     guess_FSM main(
         .clk(clk),
         .rst(btnC),

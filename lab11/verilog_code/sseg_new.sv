@@ -29,7 +29,7 @@ module sseg_new(
     );
     
     assign dp = 1'b1;
-    
+           
     wire [3:0] mux4_decoder;
     mux4 mux0(
         .sel(digit_sel),

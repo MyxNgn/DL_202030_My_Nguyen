@@ -22,9 +22,11 @@
 
 module guess_FSM(
     input clk, rst, en,
+    
+    
     input [3:0]in, //buttons
     output reg [3:0] y,// led[3:0]
-    output reg [3:0] win, lose// led[15:14] // counter for now many time win/lose
+    output reg win, lose// led[15:14] // counter for now many time win/lose
     );
     localparam [2:0] 
         s0 = 3'b000,
@@ -38,9 +40,10 @@ module guess_FSM(
     reg [2:0] state, state_next;
     
     // state memory (register)
-    always @(posedge clk, posedge rst, posedge en)
-        if (rst)
+    always @(posedge clk, posedge rst)
+        if (rst) begin
             state <= s0;
+            end
         else if (en)
             state <= state_next;
     
@@ -48,6 +51,8 @@ module guess_FSM(
     always @* begin
       // default behavior
       state_next = state;
+      win = 1'b0;
+      lose = 1'b0;
       
       case(state)
          //s0 state
@@ -92,7 +97,7 @@ module guess_FSM(
          end
          //win state
          swin: begin
-            win = win + 4'b0001;
+            win = 1'b1; // set win state to 1
             if (in == 4'b0000)
                 state_next = s0;
             else
@@ -100,7 +105,7 @@ module guess_FSM(
          end
          //lose state
          slose: begin
-            lose = lose + 4'b0001;   
+            lose = 1'b1; //set lose state to 1
             if (in == 4'b0000)
                 state_next = s0;
             else
