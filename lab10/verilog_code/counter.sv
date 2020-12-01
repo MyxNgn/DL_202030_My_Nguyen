@@ -42,4 +42,6 @@ module counter #(parameter N=1)(
         end
           
      assign msb = Qreg[N-1:N-2];
+	 
+	 
 endmodule

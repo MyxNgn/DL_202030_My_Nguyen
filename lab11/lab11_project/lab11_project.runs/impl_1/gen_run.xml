@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1606245061">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1606783832">
   <File Type="BITSTR-BMM" Name="guessing_game_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="guessing_game_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="guessing_game_timing_summary_init.rpt"/>
@@ -171,6 +171,22 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../lab08/verilog_code/sseg4.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../verilog_code/test_guess_FSM.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../verilog_code/test_guessing_game.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>

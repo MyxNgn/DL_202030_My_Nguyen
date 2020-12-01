@@ -23,7 +23,7 @@
 module guessing_game(
     input btnC, btnL, btnR, btnU, btnD, clk,
     input [15:0] sw,
-    output [5:0] led,
+    output [15:0] led,
     output [6:0] seg,
     output [3:0] an,
     output dp
@@ -108,6 +108,7 @@ module guessing_game(
         .rst(btnC),
         .seg(seg),
         .an(an),
-        .dp(dp)
+        .dp(dp),
+        .led(led[15:14])
         );
 endmodule

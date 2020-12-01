@@ -41,11 +41,10 @@ module guess_FSM(
     
     // state memory (register)
     always @(posedge clk, posedge rst)
-        if (rst) begin
+        if (rst)
             state <= s0;
-            end
-        else if (en)
-            state <= state_next;
+        else if (en) // need an en to modulate the ticks
+            state <= state_next; 
     
     // combined next-state and output logic
     always @* begin
