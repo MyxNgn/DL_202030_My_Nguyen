@@ -66,7 +66,7 @@ module guessing_game(
         
     //creating two counter of different size for mux2 element    
     wire counter_in0;
-    count #(.N(26)) c0(
+    count #(.N(25)) c0(
         .clk(clk),
         .en(1'b1),
         .rst(btnC),
@@ -74,7 +74,7 @@ module guessing_game(
         );
         
     wire counter_in1;
-    count #(.N(24)) c1(
+    count #(.N(23)) c1(
         .clk(clk),
         .en(1'b1),
         .rst(btnC),
@@ -105,10 +105,10 @@ module guessing_game(
         .win(win),
         .lose(lose),
         .clk(clk),
+        .en(mux_guess),
         .rst(btnC),
         .seg(seg),
         .an(an),
-        .dp(dp),
-        .led(led[15:14])
+        .dp(dp)
         );
 endmodule

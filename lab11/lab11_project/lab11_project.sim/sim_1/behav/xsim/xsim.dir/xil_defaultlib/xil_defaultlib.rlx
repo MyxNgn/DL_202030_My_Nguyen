@@ -2,6 +2,18 @@
 2020.1
 May 27 2020
 20:09:33
+H:/DL_202030_My_Nguyen/lab06/verilog_source/sseg_decoder.sv,1601400252,systemVerilog,,H:/DL_202030_My_Nguyen/lab11/verilog_code/sseg_new.sv,,sseg_decoder,,,,,,,,
+H:/DL_202030_My_Nguyen/lab08/verilog_code/an_decoder.sv,1603209990,systemVerilog,,H:/DL_202030_My_Nguyen/lab11/verilog_code/board.sv,,an_decoder,,,,,,,,
+H:/DL_202030_My_Nguyen/lab08/verilog_code/mux2.sv,1603209990,systemVerilog,,H:/DL_202030_My_Nguyen/lab08/verilog_code/mux4.sv,,mux2,,,,,,,,
+H:/DL_202030_My_Nguyen/lab08/verilog_code/mux4.sv,1603209990,systemVerilog,,H:/DL_202030_My_Nguyen/lab06/verilog_source/sseg_decoder.sv,,mux4,,,,,,,,
+H:/DL_202030_My_Nguyen/lab10/verilog_code/counter.sv,1606780021,systemVerilog,,H:/DL_202030_My_Nguyen/lab11/verilog_code/debounce.sv,,counter,,,,,,,,
 H:/DL_202030_My_Nguyen/lab11/lab11_project/lab11_project.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
-H:/DL_202030_My_Nguyen/lab11/verilog_code/debounce.sv,1604423103,systemVerilog,,H:/DL_202030_My_Nguyen/lab11/verilog_code/debounce_test.sv,,debounce,,,,,,,,
+H:/DL_202030_My_Nguyen/lab11/verilog_code/board.sv,1606866419,systemVerilog,,H:/DL_202030_My_Nguyen/lab11/verilog_code/count.sv,,board,,,,,,,,
+H:/DL_202030_My_Nguyen/lab11/verilog_code/count.sv,1606780378,systemVerilog,,H:/DL_202030_My_Nguyen/lab10/verilog_code/counter.sv,,count,,,,,,,,
+H:/DL_202030_My_Nguyen/lab11/verilog_code/debounce.sv,1606861539,systemVerilog,,H:/DL_202030_My_Nguyen/lab11/verilog_code/guess_FSM.sv,,debounce,,,,,,,,
 H:/DL_202030_My_Nguyen/lab11/verilog_code/debounce_test.sv,1604423099,systemVerilog,,,,debounce_test,,,,,,,,
+H:/DL_202030_My_Nguyen/lab11/verilog_code/guess_FSM.sv,1606866769,systemVerilog,,H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv,,guess_FSM,,,,,,,,
+H:/DL_202030_My_Nguyen/lab11/verilog_code/guessing_game.sv,1606866430,systemVerilog,,H:/DL_202030_My_Nguyen/lab08/verilog_code/mux2.sv,,guessing_game,,,,,,,,
+H:/DL_202030_My_Nguyen/lab11/verilog_code/sseg_new.sv,1606866130,systemVerilog,,H:/DL_202030_My_Nguyen/lab11/verilog_code/test_guessing_game.sv,,sseg_new,,,,,,,,
+H:/DL_202030_My_Nguyen/lab11/verilog_code/test_guess_FSM.sv,1606868657,systemVerilog,,,,test_guess_FSM,,,,,,,,
+H:/DL_202030_My_Nguyen/lab11/verilog_code/test_guessing_game.sv,1606869307,systemVerilog,,,,test_guessing_game,,,,,,,,

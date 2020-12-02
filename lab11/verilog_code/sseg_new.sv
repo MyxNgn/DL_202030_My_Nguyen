@@ -29,14 +29,17 @@ module sseg_new(
     );
     
     assign dp = 1'b1;
-           
+    reg [3:0] tmp1, tmp2;
+    assign tmp1 = win == 4'hA ? 4'hA : 4'hF; 
+    assign tmp2 = lose == 4'hF ? 4'hF : 4'hA;
+ 
     wire [3:0] mux4_decoder;
     mux4 mux0(
         .sel(digit_sel),
         .in0(lose),
-        .in1(4'hF),
+        .in1(tmp1),
         .in2(win),
-        .in3(4'hA),
+        .in3(tmp2),
         .out(mux4_decoder)
         );
     

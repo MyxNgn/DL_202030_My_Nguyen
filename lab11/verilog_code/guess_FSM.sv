@@ -22,11 +22,9 @@
 
 module guess_FSM(
     input clk, rst, en,
-    
-    
     input [3:0]in, //buttons
     output reg [3:0] y,// led[3:0]
-    output reg win, lose// led[15:14] // counter for now many time win/lose
+    output reg win, lose // indicator of win and lose
     );
     localparam [2:0] 
         s0 = 3'b000,

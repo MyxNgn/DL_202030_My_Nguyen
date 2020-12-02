@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Mon Nov 30 18:51:55 2020
+| Date         : Tue Dec  1 18:39:44 2020
 | Host         : ROG-112-11 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file guessing_game_control_sets_placed.rpt
 | Design       : guessing_game
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              25 |            8 |
+| No           | No                    | No                     |              25 |            9 |
 | No           | No                    | Yes                    |             142 |           36 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              14 |            7 |
+| Yes          | No                    | Yes                    |              14 |            5 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -73,10 +73,10 @@ Table of Contents
 +------------------------+---------------+------------------+------------------+----------------+--------------+
 |      Clock Signal      | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
 +------------------------+---------------+------------------+------------------+----------------+--------------+
-|  main/y_reg[3]_i_1_n_0 |               |                  |                2 |              4 |         2.00 |
-|  clk_IBUF_BUFG         | main/E[0]     | btnC_IBUF        |                2 |              4 |         2.00 |
-|  clk_IBUF_BUFG         | main/Q[0]     | btnC_IBUF        |                2 |              4 |         2.00 |
-|  clk_IBUF_BUFG         | c1/E[0]       | btnC_IBUF        |                3 |              6 |         2.00 |
+|  main/y_reg[3]_i_1_n_0 |               |                  |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG         | b/close       | btnC_IBUF        |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG         | b/cwin        | btnC_IBUF        |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG         | main/state    | btnC_IBUF        |                3 |              6 |         2.00 |
 |  clk_IBUF_BUFG         |               |                  |                6 |             21 |         3.50 |
 |  clk_IBUF_BUFG         |               | btnC_IBUF        |               36 |            142 |         3.94 |
 +------------------------+---------------+------------------+------------------+----------------+--------------+

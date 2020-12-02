@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 // ELC 2137, John Miller, 2019-11-08 
 
-module debounce #(parameter N=21)(
+    module debounce #(parameter N=21)(
     input clk, reset,
     input  in,
     output reg out,
