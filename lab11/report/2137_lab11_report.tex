@@ -1,0 +1,114 @@
+% Digital Logic Report Template
+% Created: 2020-01-10, John Miller
+
+%==========================================================
+%=========== Document Setup  ==============================
+
+% Formatting defined by class file
+\documentclass[11pt]{article}
+
+% ---- Document formatting ----
+\usepackage[margin=1in]{geometry}	% Narrower margins
+\usepackage{booktabs}				% Nice formatting of tables
+\usepackage{graphicx}				% Ability to include graphics
+
+%\setlength\parindent{0pt}	% Do not indent first line of paragraphs 
+\usepackage[parfill]{parskip}		% Line space b/w paragraphs
+%	parfill option prevents last line of pgrph from being fully justified
+
+% Parskip package adds too much space around titles, fix with this
+\RequirePackage{titlesec}
+\titlespacing\section{0pt}{8pt plus 4pt minus 2pt}{3pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{4pt plus 4pt minus 2pt}{-2pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{2pt plus 4pt minus 2pt}{-6pt plus 2pt minus 2pt}
+
+% ---- Hyperlinks ----
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}	% For URL's. Automatically links internal references.
+
+% ---- Code listings ----
+\usepackage{listings} 					% Nice code layout and inclusion
+\usepackage[usenames,dvipsnames]{xcolor}	% Colors (needs to be defined before using colors)
+
+% Define custom colors for listings
+\definecolor{listinggray}{gray}{0.98}		% Listings background color
+\definecolor{rulegray}{gray}{0.7}			% Listings rule/frame color
+
+% Style for Verilog
+\lstdefinestyle{Verilog}{
+	language=Verilog,					% Verilog
+	backgroundcolor=\color{listinggray},	% light gray background
+	rulecolor=\color{blue}, 			% blue frame lines
+	frame=tb,							% lines above & below
+	linewidth=\columnwidth, 			% set line width
+	basicstyle=\small\ttfamily,	% basic font style that is used for the code	
+	breaklines=true, 					% allow breaking across columns/pages
+	tabsize=3,							% set tab size
+	commentstyle=\color{gray},	% comments in italic 
+	stringstyle=\upshape,				% strings are printed in normal font
+	showspaces=false,					% don't underscore spaces
+}
+
+% How to use: \Verilog[listing_options]{file}
+\newcommand{\Verilog}[2][]{%
+	\lstinputlisting[style=Verilog,#1]{#2}
+}
+
+\begin{document}
+
+\title{ELC 2137 Lab 11: FSM Guessing Game}
+\author{My Nguyen}
+
+\maketitle
+
+\section*{Summary}
+This lab's purpose is to get a better understanding of the role of finite state machines (FSM), the difference between a Mealy output and a Moore output, how to implement state in Verilog. First part of the lab is to implement guess\_FSM module to the given guessing game state diagram. Next, board module is implemented to convert guess\_FSM module output to the seven-segment display output. Then, the counter module is modified to output only a tick instead of the two most significant numbers. Finally, guessing\_game module is implemented using debounce module for the buttons, counter modules to adjust the difficulty of the game, guess\_FSM as logic, and board module to output to the board. Afterward, create test file for guess\_FSM, and guessing\_game, then test the game using the Basys3 board.
+
+\section*{Simulation Waveform}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth,trim=24cm 18cm 0.5cm 5.5cm,clip]{"debouncing"}
+	\caption{Debouncing ERT}
+	\includegraphics[width=\textwidth,trim=24cm 17.5cm 0.5cm 5.5cm,clip]{"guess_FSM"}
+	\caption{guess\_FSM ERT}
+	\includegraphics[width=\textwidth,trim=24cm 15cm 0.5cm 5.5cm,clip]{"guessing_game"}
+	\caption{guessing\_game ERT}
+\end{figure}
+
+
+\section*{Code}
+\Verilog[firstline=23,caption=debounce Test Bench]{../verilog_code/debounce_test.sv}
+\Verilog[firstline=23,caption=guess\_FSM Implementation]{../verilog_code/guess_FSM.sv}
+\Verilog[firstline=23,caption=guess\_FSM Test Bench]{../verilog_code/test_guess_FSM.sv}
+\Verilog[firstline=23,caption=guessing\_game Implementation]{../verilog_code/guessing_game.sv}
+\Verilog[firstline=23,caption=guessing\_game Test Bench]{../verilog_code/test_guessing_game.sv}
+
+
+\section*{Data List}
+\begin{table*}[ht]\centering
+	\caption{Lists of Games Played}
+	\begin{tabular}{c|c|c}
+		Game & N = 25 & N = 23 \\
+		\midrule
+		1  & win  & win  \\
+		2  & lose & win  \\
+		3  & win  & lose \\		
+		4  & lose & win  \\
+		5  & lose & lose \\
+		6  & lose & lose \\
+		7  & win  & win  \\
+		8  & lose & win  \\
+		9  & lose & win  \\
+		10 & lose & lose \\
+		\midrule
+		Winrate & 30\% & 60\% \\
+		\bottomrule
+	\end{tabular}
+\end{table*}
+
+\section*{Q\&A}
+\begin{enumerate}
+	\item In the simulation the debounce circuit reach each of the four states around 621ns
+	\item This game can't be implemented using sequential logic because the game state must run independently from the the buttons and the output, if not, the game will be very glitchy.
+	\item I used both Mealy and Moore output for my design. I used Moore output to control the led indicating which state the program was in, because there is no further condition needed for it to be true. For everything else like determining the next state, and win/lose condition, I used Mealy output. I did this because there are multiple variable that needed to consider when determining next state for guess\_FSM, because a button could reset the state, get the correct guess or the wrong guess. Meanwhile, for my ``board" module, Moore output is also used to determine next state since it need win/lose flag to do so.
+\end{enumerate} 
+\end{document}
